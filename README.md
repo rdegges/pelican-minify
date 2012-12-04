@@ -17,7 +17,7 @@ $ pip install pelican-minify
 ## Usage
 
 To use `pelican-minify`, you need to make only a single change to your
-`pelicanconf.py` file (the configuration file that `pelican` uses to generate
+`pelicanconf.py` file (the configuration file that Pelican uses to generate
 your static site.
 
 Update your `PLUGINS` global, and append `minify` to the list, eg:
