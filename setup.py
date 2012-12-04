@@ -6,7 +6,7 @@ from setuptools import setup
 setup(
 
     # Basic package information:
-    name = 'data247',
+    name = 'pelican-minify',
     version = '0.1',
     py_modules = ('minify',),
 
