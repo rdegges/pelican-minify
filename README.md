@@ -5,6 +5,8 @@
 An HTML minification plugin for
 [Pelican](http://pelican.readthedocs.org/en/latest/), the static site generator.
 
+![Pelican Logo](https://github.com/rdegges/pelican-minify/raw/master/pelican.png)
+
 
 ## Install
 
