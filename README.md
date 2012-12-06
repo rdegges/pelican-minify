@@ -1,5 +1,7 @@
 # pelican-minify
 
+[![Build Status](https://secure.travis-ci.org/rdegges/pelican-minify.png?branch=master)](https://travis-ci.org/rdegges/pelican-minify)
+
 An HTML minification plugin for
 [Pelican](http://pelican.readthedocs.org/en/latest/), the static site generator.
 
