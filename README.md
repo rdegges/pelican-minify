@@ -53,3 +53,8 @@ adds extra file processing for each page generated.
 v0.1: 12-4-2012
 
     - First release!
+
+v0.2: 2-12-2013
+
+    - Fixing issue with unicode characters.
+    - Upgrading django-htmlmin dependency.
