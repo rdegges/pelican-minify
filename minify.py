@@ -5,7 +5,7 @@ from logging import getLogger
 from os import walk
 from os.path import join
 
-from htmlmin.minify import html_minify
+from htmlmin.minify import html_minify as min
 from pelican import signals
 
 
@@ -33,7 +33,7 @@ def create_minified_file(filename):
     with open(filename, 'wb') as f:
         try:
             logger.debug('Minifying: %s' % filename)
-            compressed = html_minify(uncompressed)
+            compressed = min(uncompressed)
             f.write(compressed)
         except Exception, ex:
             logger.critical('HTML Minification failed: %s' % ex)
