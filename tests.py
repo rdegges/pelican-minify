@@ -32,7 +32,7 @@ class TestMinify(TestCase):
             f.write('   <html>     <head>hi</head>   </html>        ')
             f.close()
             create_minified_file(a_html_filename)
-            self.assertEqual(open(a_html_filename).read(), '<html> <head>hi</head> </html>')
+            self.assertEqual(open(a_html_filename).read(), '<html> <head>hi</head></html>')
 
 
 if __name__ == '__main__':
