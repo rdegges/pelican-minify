@@ -58,3 +58,7 @@ v0.2: 2-12-2013
 
     - Fixing issue with unicode characters.
     - Upgrading django-htmlmin dependency.
+
+v0.3: 2-12-2013
+
+    - Fixing tests.
