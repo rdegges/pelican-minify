@@ -4,10 +4,16 @@
 from logging import getLogger
 from os import walk
 from os.path import join
+import sys
 
 from htmlmin.minify import html_minify as min
 from pelican import signals
 
+# we need save unicode strings to files 
+if sys.version_info[0] < 3:
+    import codecs
+    _open_func_bak = open # Make a back up, just in case
+    open = codecs.open
 
 logger = getLogger(__name__)
 
@@ -30,7 +36,7 @@ def create_minified_file(filename):
     :param str filename: The file to minify.
     """
     uncompressed = open(filename).read()
-    with open(filename, 'wb') as f:
+    with open(filename, 'w', encoding='utf-8') as f:
         try:
             logger.debug('Minifying: %s' % filename)
             compressed = min(uncompressed)
