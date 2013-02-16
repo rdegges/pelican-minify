@@ -62,3 +62,7 @@ v0.2: 2-12-2013
 v0.3: 2-12-2013
 
     - Fixing tests.
+
+v0.4: 2-15-2013
+
+    - Upgrading django-htmlmin.
