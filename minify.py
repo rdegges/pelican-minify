@@ -9,11 +9,15 @@ import sys
 from htmlmin.minify import html_minify as min
 from pelican import signals
 
-# we need save unicode strings to files 
+
+# We need save unicode strings to files.
 if sys.version_info[0] < 3:
     import codecs
-    _open_func_bak = open # Make a back up, just in case
+
+    # Make a back up, just in case.
+    _open_func_bak = open
     open = codecs.open
+
 
 logger = getLogger(__name__)
 
