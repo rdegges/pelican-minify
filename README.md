@@ -70,3 +70,7 @@ v0.3: 2-12-2013
 v0.4: 2-15-2013
 
     - Upgrading django-htmlmin.
+
+v0.5: 8-28-2014
+
+    - Python 3 compatibility (thanks @AlexJF!).
