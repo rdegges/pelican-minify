@@ -11,13 +11,10 @@ from pelican import signals
 
 
 # We need save unicode strings to files.
-if sys.version_info[0] < 3:
-    import codecs
-
-    # Make a back up, just in case.
-    _open_func_bak = open
-    open = codecs.open
-
+try:
+    from codecs import open
+except ImportError:
+    pass
 
 logger = getLogger(__name__)
 
@@ -39,7 +36,7 @@ def create_minified_file(filename):
 
     :param str filename: The file to minify.
     """
-    uncompressed = open(filename).read()
+    uncompressed = open(filename, encoding='utf-8').read()
     with open(filename, 'w', encoding='utf-8') as f:
         try:
             logger.debug('Minifying: %s' % filename)
