@@ -74,3 +74,7 @@ v0.4: 2-15-2013
 v0.5: 8-28-2014
 
     - Python 3 compatibility (thanks @AlexJF!).
+
+v0.6: 9-9-2014
+
+    - Fixing unicode bug (thanks @kura!).
