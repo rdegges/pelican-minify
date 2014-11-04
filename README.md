@@ -78,3 +78,7 @@ v0.5: 8-28-2014
 v0.6: 9-9-2014
 
     - Fixing unicode bug (thanks @kura!).
+
+v0.7: 11-4-2014
+
+    - Making minification work on .htm files (thanks @Undeterminant!).
