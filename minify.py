@@ -26,7 +26,7 @@ def minify_html(pelican):
     """
     for dirpath, _, filenames in walk(pelican.settings['OUTPUT_PATH']):
         for name in filenames:
-            if name.endswith('.html'):
+            if name.endswith('.html') or name.endswith('.htm'):
                 filepath = join(dirpath, name)
                 create_minified_file(filepath)
 
