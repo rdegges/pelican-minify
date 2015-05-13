@@ -42,7 +42,8 @@ def create_minified_file(filename):
             logger.debug('Minifying: %s' % filename)
             compressed = min(uncompressed, remove_comments=True,
                              remove_all_empty_space=True,
-                             remove_empty_space=True)
+                             remove_empty_space=True,
+                             remove_optional_attribute_quotes=False)
             f.write(compressed)
         except Exception as ex:
             logger.critical('HTML Minification failed: %s' % ex)
