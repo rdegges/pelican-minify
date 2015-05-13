@@ -19,7 +19,7 @@ setup(
 
     # Metadata for PyPI:
     author = 'Randall Degges',
-    author_email = 'rdegges@gmail.com',
+    author_email = 'r@rdegges.com',
     license = 'UNLICENSE',
     url = 'https://github.com/rdegges/pelican-minify',
     keywords = 'pelican blog static minify html minification',
