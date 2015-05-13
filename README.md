@@ -82,3 +82,8 @@ v0.6: 9-9-2014
 v0.7: 11-4-2014
 
     - Making minification work on .htm files (thanks @Undeterminant!).
+
+v0.8: 5-12-2015
+
+    - No longer removing optional quotes from HTML elements. This provides
+      better compatibility across browsers / etc.
