@@ -5,7 +5,6 @@ from unittest import TestCase, main
 
 from minify import create_minified_file
 
-
 @contextmanager
 def temporary_folder():
     """Creates a temporary folder, return it and delete it afterwards.
