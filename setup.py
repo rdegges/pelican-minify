@@ -7,7 +7,7 @@ setup(
 
     # Basic package information:
     name = 'pelican-minify',
-    version = '0.8',
+    version = '0.9',
     py_modules = ('minify',),
 
     # Packaging options:

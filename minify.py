@@ -28,10 +28,10 @@ def minify_html(pelican):
         for name in filenames:
             if name.endswith('.html') or name.endswith('.htm'):
                 filepath = join(dirpath, name)
-                create_minified_file(filepath)
+                create_minified_file(filepath, pelican.settings.get('MINIFY', {}))
 
 
-def create_minified_file(filename):
+def create_minified_file(filename, options):
     """Create a minified HTML file, overwriting the original.
 
     :param str filename: The file to minify.
@@ -40,10 +40,7 @@ def create_minified_file(filename):
     with open(filename, 'w', encoding='utf-8') as f:
         try:
             logger.debug('Minifying: %s' % filename)
-            compressed = min(uncompressed, remove_comments=True,
-                             remove_all_empty_space=True,
-                             remove_empty_space=True,
-                             remove_optional_attribute_quotes=False)
+            compressed = min(uncompressed, **options)
             f.write(compressed)
         except Exception as ex:
             logger.critical('HTML Minification failed: %s' % ex)
