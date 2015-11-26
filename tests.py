@@ -5,6 +5,7 @@ from unittest import TestCase, main
 
 from minify import create_minified_file
 
+
 @contextmanager
 def temporary_folder():
     """Creates a temporary folder, return it and delete it afterwards.
@@ -30,7 +31,7 @@ class TestMinify(TestCase):
             f = open(a_html_filename, 'w')
             f.write('   <html>   <head></head>  <body>hi</body>   </html>        ')
             f.close()
-            create_minified_file(a_html_filename, { 'remove_all_empty_space': True })
+            create_minified_file(a_html_filename, {'remove_all_empty_space': True})
             self.assertEqual(open(a_html_filename).read(), '<html><head></head><body>hi</body></html>')
 
 
