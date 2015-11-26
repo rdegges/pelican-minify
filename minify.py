@@ -4,7 +4,6 @@
 from logging import getLogger
 from os import walk
 from os.path import join
-import sys
 
 from htmlmin import minify
 from pelican import signals
@@ -18,6 +17,7 @@ except ImportError:
 
 logger = getLogger(__name__)
 
+
 def minify_html(pelican):
     """Minify all HTML files.
 
@@ -25,8 +25,10 @@ def minify_html(pelican):
     """
     options = pelican.settings.get('MINIFY', {})
     files_to_minify = []
+
     for dirpath, _, filenames in walk(pelican.settings['OUTPUT_PATH']):
-        files_to_minify += [ join(dirpath, name) for name in filenames if name.endswith('.html') or name.endswith('.htm') ]
+        files_to_minify += [join(dirpath, name) for name in filenames if name.endswith('.html') or name.endswith('.htm')]
+
     Parallel(n_jobs=-1)(delayed(create_minified_file)(filepath, options) for filepath in files_to_minify)
 
 
@@ -36,6 +38,7 @@ def create_minified_file(filename, options):
     :param str filename: The file to minify.
     """
     uncompressed = open(filename, encoding='utf-8').read()
+
     with open(filename, 'w', encoding='utf-8') as f:
         try:
             logger.debug('Minifying: %s' % filename)
