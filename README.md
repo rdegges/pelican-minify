@@ -106,3 +106,8 @@ v0.8: 5-12-2015
 
     - No longer removing optional quotes from HTML elements. This provides
       better compatibility across browsers / etc.
+
+v0.9: 11-25-2015
+
+    - Making minify library configurable.
+    - Removing aggressive whitespace removal (*avoids issues*).
