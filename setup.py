@@ -7,7 +7,7 @@ setup(
 
     # Basic package information:
     name = 'pelican-minify',
-    version = '0.8',
+    version = '0.9',
     py_modules = ('minify',),
 
     # Packaging options:
@@ -15,7 +15,7 @@ setup(
     include_package_data = True,
 
     # Package dependencies:
-    install_requires = ['htmlmin>=0.1.5', 'pelican>=3.1.1'],
+    install_requires = ['htmlmin>=0.1.5', 'pelican>=3.1.1', 'joblib>=0.9'],
 
     # Metadata for PyPI:
     author = 'Randall Degges',

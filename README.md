@@ -43,6 +43,23 @@ PLUGINS = [
 The next time you build your Pelican site, `pelican-minify` will automatically
 minify your Pelican pages after they've been generated.
 
+`pelican-minify` can also be configured by setting `MINIFY` to a hash containing
+[parameters to htmlmin](https://htmlmin.readthedocs.org/en/latest/reference.html#htmlmin.minify), eg:
+
+``` python
+# pelicanconf.py
+
+# ...
+
+MINIFY = {
+  'remove_comments': True,
+  'remove_all_empty_space': True,
+  'remove_optional_attribute_quotes': False
+}
+
+# ...
+```
+
 This reduces file size and obscures the public source code, but keep in
 mind--minifying your static site will increase your Pelican build times, as it
 adds extra file processing for each page generated.
