@@ -1,5 +1,7 @@
 # pelican-minify
 
+[![PyPI Version](https://img.shields.io/pypi/v/pelican-minify.svg)](https://pypi.python.org/pypi/pelican-minify)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/pelican-minify.svg)](https://pypi.python.org/pypi/pelican-minify)
 [![Build Status](https://secure.travis-ci.org/rdegges/pelican-minify.png?branch=master)](https://travis-ci.org/rdegges/pelican-minify)
 
 An HTML minification plugin for
